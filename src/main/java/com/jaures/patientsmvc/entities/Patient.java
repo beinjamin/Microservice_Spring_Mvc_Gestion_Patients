@@ -1,4 +1,5 @@
-package entities;
+package com.jaures.patientsmvc.entities;
+
 
 import java.util.Date;
 

@@ -7,8 +7,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import entities.Patient;
-import repositories.PatientRepository;
+import com.jaures.patientsmvc.entities.Patient;
+import com.jaures.patientsmvc.repositories.PatientRepository;
+
 
 @SpringBootApplication
 public class PatientsMvcApplication {
