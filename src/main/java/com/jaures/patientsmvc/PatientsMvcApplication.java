@@ -21,8 +21,16 @@ public class PatientsMvcApplication {
 	{
 		return args -> {
 			
-			patientRepository.save(new Patient(null,"jaures",new Date(),false,12));
-			
+			patientRepository.save(
+					new Patient(null,"jaures",new Date(),false,12));
+			patientRepository.save(
+					new Patient(null,"Hugo",new Date(),true,12));
+			patientRepository.save(
+					new Patient(null,"sebatient",new Date(),true,85));
+			patientRepository.findAll().forEach(p->{
+				System.out.println(p.getNom());
+				
+			});
 		};
 	}
 }
