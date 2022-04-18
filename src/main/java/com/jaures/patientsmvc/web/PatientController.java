@@ -11,6 +11,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class PatientController {
 	
+	@SuppressWarnings("unused")
 	private PatientRepository patientRepository;
 	
 	@GetMapping(path = "/index")
