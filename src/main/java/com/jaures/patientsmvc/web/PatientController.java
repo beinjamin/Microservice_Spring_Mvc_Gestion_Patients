@@ -19,7 +19,7 @@ public class PatientController {
 	private PatientRepository patientRepository;
 	
 	@GetMapping(path = "/index")
-    public String patients(Model model) {
+    public String patients(Model model, int page , int size) {
 		List<Patient> patients=patientRepository.findAll();
 		model.addAttribute("listPatients",patients);
 		return "patients";
