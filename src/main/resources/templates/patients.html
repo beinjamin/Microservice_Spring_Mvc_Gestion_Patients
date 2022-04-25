@@ -29,7 +29,7 @@
 </table>
 <ul class="nav nav-pills">
 <li th:each="page,status:${pages}">
- <a class="btn btn-outline-info m-lg-1" th:text="${status.index}"></a>
+ <a th:class="${status.index==status.current?'btn btn-info ml-1':'btn btn-outline-info ml-1'}"th:text="${status.index}"></a>
 </li>
 </ul>
 </div>
