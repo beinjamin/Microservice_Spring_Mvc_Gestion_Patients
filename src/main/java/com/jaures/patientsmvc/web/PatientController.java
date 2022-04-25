@@ -24,7 +24,7 @@ public class PatientController {
 	@GetMapping(path = "/index")
     public String patients(Model model, 
     		@RequestParam(name = "page",defaultValue = "0" )int page ,
-    		@RequestParam(name = "size",defaultValue = "10" )int size) {
+    		@RequestParam(name = "size",defaultValue = "5" )int size) {
 		Page<Patient> pagePatients=patientRepository.findAll(PageRequest.of(page, size));
 		model.addAttribute("listPatients",pagePatients.getContent());
 		model.addAttribute("pages", new int [pagePatients.getTotalPages()]);
